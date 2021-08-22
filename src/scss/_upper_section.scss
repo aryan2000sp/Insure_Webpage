@@ -1,0 +1,17 @@
+.upper-section {
+  &-img {
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-info {
+    background-color: #2d2641;
+    min-height: 31.25rem;
+    > img {
+      // width: 4.9375rem;
+      height: 10.8125rem;
+    }
+  }
+}

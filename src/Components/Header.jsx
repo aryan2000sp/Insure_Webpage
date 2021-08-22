@@ -2,10 +2,10 @@
 import { useState } from "react";
 
 // Import images, icon
-import logo from "../images/logo.svg";
-import hamburger from "../images/icon-hamburger.svg";
-import close from "../images/icon-close.svg";
-import navImage from "../images/bg-pattern-mobile-nav.svg";
+import { ReactComponent as Logo } from "../images/logo.svg";
+import { ReactComponent as Hamburger } from "../images/icon-hamburger.svg";
+import { ReactComponent as Close } from "../images/icon-close.svg";
+import { ReactComponent as NavImage } from "../images/bg-pattern-mobile-nav.svg";
 
 const Header = () => {
   // Set the initial state of the component.
@@ -13,13 +13,29 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="header-nav flex-row flex-row-jc-sb flex-row-ai-c">
-        <img src={logo} alt="logo" />
-        <img
+        <Logo />
+        {/* <img
           src={show ? close : hamburger}
           alt="hamburger-menu"
           onClick={() => setShow(!show)}
           className="header-mobile"
-        />
+        /> */}
+
+        {show ? (
+          <Close
+            onClick={() => {
+              setShow(!show);
+            }}
+            className="header-mobile"
+          />
+        ) : (
+          <Hamburger
+            onClick={() => {
+              setShow(!show);
+            }}
+            className="header-mobile"
+          />
+        )}
 
         {/* This is the section navigation bar for the desktop view */}
         <section className="header-desktop flex-row flex-row-ai-c">
@@ -51,7 +67,11 @@ const PopupNav = () => {
         <a href="/">ACCOUNT</a>
         <button>VIEW PLANS</button>
       </div>
-      <img src={navImage} alt="nav" />
+      {/* <img src={navImage} alt="nav" /> */}
+
+      <div className="header-svg">
+        <NavImage />
+      </div>
     </section>
   );
 };
