@@ -1,0 +1,114 @@
+.header {
+  padding: 1.5rem;
+  position: relative;
+
+  &-desktop {
+    > ul {
+      margin-right: 2.0625rem;
+      > li {
+        &:not(:last-child) {
+          margin-right: 1.625rem;
+        }
+
+        > a {
+          font-family: "Karla", sans-serif;
+          font-weight: 400;
+          font-size: 0.8125rem;
+          color: #837d88;
+          &:hover {
+            color: #2c2830;
+          }
+        }
+      }
+    }
+
+    > button {
+      padding: 0.75rem 1.78125rem;
+      font-family: "Karla", sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: #2c2830;
+      background-color: #fff;
+      border: 1.5px solid #2c2830;
+
+      &:hover {
+        color: #fff;
+        background-color: #2c2830;
+      }
+    }
+  }
+
+  &-popup-nav {
+    background-color: #2c2830;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    left: 0;
+
+    .links {
+      text-align: center;
+      margin: 2.5rem 1.5rem 5rem 1.5rem;
+      > a {
+        font-family: "Karla", sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #fff;
+        margin-bottom: 1.5rem;
+      }
+
+      > button {
+        padding: 0.75rem 1.78125rem;
+        background-color: #2c2830;
+        color: #fff;
+        border: 1.5px solid #fff;
+        font-family: "Karla", sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+}
+
+// Media queries
+
+// For sizes 600px and above
+@include breakpoint-up(medium) {
+  .header {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+// For sizes 800px and above
+@include breakpoint-up(large) {
+  .header {
+    padding-right: 5.15625rem;
+    padding-left: 5.25rem;
+    &-mobile {
+      display: none;
+    }
+    &-popup-nav {
+      display: none;
+    }
+  }
+}
+
+// For sizes 1300px and above
+@include breakpoint-up(x-large) {
+  .header {
+    padding-left: 10.5rem;
+    padding-right: 10.3125rem;
+  }
+}
+
+// For sizes 800px and down
+@include breakpoint-down(medium) {
+  .header {
+    &-desktop {
+      display: none;
+    }
+  }
+}
