@@ -51,7 +51,7 @@ const PopupNav = () => {
         <a href="/">ACCOUNT</a>
         <button>VIEW PLANS</button>
       </div>
-      <img src={navImage} alt="nav-Image" />
+      <img src={navImage} alt="nav" />
     </section>
   );
 };
