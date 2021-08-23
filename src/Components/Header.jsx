@@ -1,6 +1,6 @@
 // Import react tools
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 // Import images, icon
 import { ReactComponent as Logo } from "../images/logo.svg";
 import { ReactComponent as Hamburger } from "../images/icon-hamburger.svg";
@@ -11,7 +11,10 @@ const Header = () => {
   // Set the initial state of the component.
   const [show, setShow] = useState(false);
   return (
-    <header className="header">
+    <header
+      className="header"
+      // style={show ? { overflow: "auto" } : { overflow: "hidden" }}
+    >
       <nav className="header-nav flex-row flex-row-jc-sb flex-row-ai-c">
         <Logo />
         {/* <img
@@ -53,14 +56,28 @@ const Header = () => {
           <button>VIEW PLANS</button>
         </section>
       </nav>
-      {show && <PopupNav />}
+      <PopupNav show={show} />
     </header>
   );
 };
 
-const PopupNav = () => {
+const PopupNav = ({ show }) => {
   return (
-    <section className="header-popup-nav">
+    <motion.section
+      className="header-popup-nav"
+      initial={{
+        x: "100vw",
+        opacity: 0.4,
+      }}
+      animate={{
+        x: show ? "0vw" : "100vw",
+        opacity: show ? 1 : 0.4,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 70,
+      }}
+    >
       <div className="links flex-col">
         <a href="/">HOW WE WORK</a>
         <a href="/">BLOG</a>
@@ -72,7 +89,7 @@ const PopupNav = () => {
       <div className="header-svg">
         <NavImage />
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default Header;

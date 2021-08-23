@@ -2,7 +2,7 @@ import React from "react";
 
 // Images or icons
 import mobileImage from "../images/image-intro-mobile.jpg";
-import designCurve1 from "../images/bg-pattern-intro-left-mobile.svg";
+import { ReactComponent as DesignLeft } from "../images/bg-pattern-intro-left-mobile.svg";
 const UpperSection = () => {
   return (
     <section className="upper-section">
@@ -10,7 +10,7 @@ const UpperSection = () => {
         <img src={mobileImage} alt="mobile" />
       </div>
       <article className="upper-section-info">
-        <img src={designCurve1} alt="" />
+        <DesignLeft />
       </article>
     </section>
   );

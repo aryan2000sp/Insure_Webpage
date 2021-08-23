@@ -1,7 +1,11 @@
 .header {
+  // overflow: auto;
   padding: 1.5rem;
-  position: relative;
-
+  position: fixed;
+  height: 5rem;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
   &-desktop {
     > ul {
       margin-right: 2.0625rem;
@@ -40,10 +44,10 @@
 
   &-popup-nav {
     background-color: #2c2830;
-    position: absolute;
+    position: fixed;
+    width: 100vw;
     top: 5rem;
     right: 0;
-    left: 0;
 
     .links {
       text-align: center;
