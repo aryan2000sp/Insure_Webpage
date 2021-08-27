@@ -11,18 +11,9 @@ const Header = () => {
   // Set the initial state of the component.
   const [show, setShow] = useState(false);
   return (
-    <header
-      className="header"
-      // style={show ? { overflow: "auto" } : { overflow: "hidden" }}
-    >
+    <header className="header">
       <nav className="header-nav flex-row flex-row-jc-sb flex-row-ai-c">
         <Logo />
-        {/* <img
-          src={show ? close : hamburger}
-          alt="hamburger-menu"
-          onClick={() => setShow(!show)}
-          className="header-mobile"
-        /> */}
 
         {show ? (
           <Close
@@ -56,12 +47,12 @@ const Header = () => {
           <button>VIEW PLANS</button>
         </section>
       </nav>
-      <PopupNav show={show} />
+      <SliderNav show={show} />
     </header>
   );
 };
 
-const PopupNav = ({ show }) => {
+const SliderNav = ({ show }) => {
   return (
     <motion.section
       className="header-popup-nav"

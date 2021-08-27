@@ -2,11 +2,14 @@
   // overflow: auto;
   padding: 1.5rem;
   position: fixed;
+  // We want navbar above all the components in web page
+  z-index: 1000;
   height: 5rem;
   top: 0;
   width: 100%;
   background-color: #fff;
   &-desktop {
+    display: none;
     > ul {
       margin-right: 2.0625rem;
       > li {
@@ -82,13 +85,16 @@
     padding-left: 3rem;
   }
 }
-// For sizes 800px and above
+// For sizes 900px and above
 @include breakpoint-up(large) {
   .header {
     padding-right: 5.15625rem;
     padding-left: 5.25rem;
     &-mobile {
       display: none;
+    }
+    &-desktop {
+      display: flex;
     }
     &-popup-nav {
       display: none;
@@ -105,10 +111,10 @@
 }
 
 // For sizes 800px and down
-@include breakpoint-down(medium) {
-  .header {
-    &-desktop {
-      display: none;
-    }
-  }
-}
+// @include breakpoint-down(medium) {
+//   .header {
+//     &-desktop {
+//       display: none;
+//     }
+//   }
+// }

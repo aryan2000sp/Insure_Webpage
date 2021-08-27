@@ -1,18 +1,201 @@
 .upper-section {
   margin-top: 5rem;
-  &-img {
+  .mobile-img {
     > img {
       display: block;
       width: 100%;
     }
   }
 
-  &-info {
+  .desktop-img {
+    display: none;
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-article {
+    padding: 5.8125rem 1.5rem;
     background-color: #2d2641;
     min-height: 31.25rem;
-    > img {
-      // width: 4.9375rem;
-      height: 10.8125rem;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 0rem;
+      left: 0rem;
+      height: 100%;
+      width: 100%;
+    }
+    // This is the ::after psuedo selector for article
+    &::after {
+      z-index: 2;
+      content: "";
+      background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: right top;
+      top: 21.625rem;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .info {
+      max-width: 25rem;
+      .line {
+        display: none;
+        width: 9.375rem;
+        border: 0.25px solid #fff;
+      }
+      > h1 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-size: 3rem;
+        letter-spacing: -0.041875rem;
+        line-height: 3rem;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      > P {
+        font-family: "Karla", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        line-height: 1.625rem;
+        margin-bottom: 2rem;
+      }
+
+      &-button {
+        // padding: 0.8125rem 1.75rem;
+        text-transform: uppercase;
+        font-family: "Karla", sans-serif;
+        font-weight: 700;
+        font-size: 0.8125rem;
+        width: 9.125rem;
+        letter-spacing: 0.09375rem;
+        color: #fff;
+        border: 0.09375rem solid #fff;
+        background-color: #2d2641;
+        height: 2.5rem;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: #fff;
+          color: #2d2641;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for component
+
+// For width 600px and above.
+@include breakpoint-up(medium) {
+  .upper-section {
+    .mobile-img {
+      display: none;
+    }
+    &-article {
+      justify-content: space-between;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      .info {
+        margin-right: 1.875rem;
+        width: 50%;
+        align-items: flex-start;
+        > h1 {
+          font-size: 2.25rem;
+          text-align: left;
+        }
+        > p {
+          text-align: left;
+        }
+      }
+      .desktop-img {
+        max-width: 33.75rem;
+        max-height: 40.625rem;
+        width: 50%;
+        display: block;
+      }
+    }
+  }
+}
+
+// For 900px and above
+@include breakpoint-up(large) {
+  .upper-section {
+    &-article {
+      justify-content: space-between;
+      padding-right: 5.15625rem;
+      padding-left: 5.25rem;
+      padding-top: 6.5625rem;
+      align-items: flex-start;
+      height: 37.5rem;
+
+      .desktop-img {
+        position: relative;
+        > img {
+          position: absolute;
+          top: 0rem;
+        }
+      }
+
+      .info {
+        max-width: none;
+        // margin-top: 3.9375rem;
+        > h1 {
+          font-size: 3.25rem;
+          margin-bottom: 2rem;
+        }
+        > p {
+          margin-bottom: 1.5rem;
+        }
+        .line {
+          display: block;
+          margin-bottom: 3.9375rem;
+        }
+      }
+    }
+  }
+}
+
+// For 1300px and above
+@include breakpoint-up(x-large) {
+  .upper-section {
+    &-article {
+      justify-content: space-between;
+      padding-left: 10.5rem;
+      padding-right: 10.3125rem;
+
+      &::before {
+        top: 25.875rem;
+        background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+      }
+
+      &::after {
+        top: 0;
+        right: 0;
+        background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+      }
+
+      .info {
+        max-width: 33.75rem;
+        > h1 {
+          font-size: 4.5rem;
+          letter-spacing: -0.0625rem;
+          line-height: 4rem;
+        }
+      }
     }
   }
 }
