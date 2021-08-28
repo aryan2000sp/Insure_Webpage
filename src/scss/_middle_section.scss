@@ -1,0 +1,109 @@
+.middle-section {
+  padding: 8.75rem 1.5rem;
+  &-line {
+    width: 9.375rem;
+    height: 0.0625rem;
+    background-color: #c396c6;
+    margin-bottom: 2.5rem;
+  }
+
+  &-title {
+    margin-bottom: 5rem;
+    > h1 {
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 3rem;
+      letter-spacing: -0.041875rem;
+      text-align: center;
+    }
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 21.875rem;
+    max-height: 15.625rem;
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+    }
+    > h2 {
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      font-size: 1.75rem;
+      line-height: 2.375rem;
+      letter-spacing: -0.39px;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #2c2830;
+    }
+
+    > p {
+      font-family: "Karla", sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.625rem;
+      text-align: center;
+      color: #837d88;
+    }
+  }
+}
+
+// Media queries
+
+// For 900px and above
+@include breakpoint-up(large) {
+  .middle-section {
+    &-title {
+      > h1 {
+        font-size: 3.375rem;
+      }
+    }
+  }
+}
+
+// For 1300 and above
+@include breakpoint-up(x-large) {
+  .middle-section {
+    padding-top: 19.0625rem;
+    padding-left: 10.5rem;
+    padding-right: 10.3125rem;
+    padding-bottom: 9.875rem;
+    align-items: flex-start;
+
+    &-line {
+      margin-bottom: 3.9375rem;
+    }
+    &-title {
+      margin-bottom: 6rem;
+      > h1 {
+        font-size: 4.5rem;
+        line-height: 4rem;
+        letter-spacing: -0.0625rem;
+      }
+    }
+
+    &-articles {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &-row {
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-right: 1.875rem;
+        margin-bottom: 0rem;
+      }
+      > h2 {
+        text-align: left;
+      }
+      > p {
+        text-align: left;
+      }
+    }
+  }
+}
