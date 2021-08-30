@@ -60,7 +60,7 @@
         color: #fff;
         margin-bottom: 1rem;
       }
-      > P {
+      > p {
         font-family: "Karla", sans-serif;
         font-weight: 400;
         font-size: 1rem;
@@ -70,7 +70,11 @@
         margin-bottom: 2rem;
       }
 
-      &-button {
+      > button {
+        // The z-index is here because
+        // the ::before and ::after pseudo
+        // selectors are covering it.
+        z-index: 3;
         // padding: 0.8125rem 1.75rem;
         text-transform: uppercase;
         font-family: "Karla", sans-serif;

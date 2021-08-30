@@ -1,0 +1,109 @@
+.lower-section {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 4.5rem 1.5rem;
+  background-color: #2d2641;
+  margin-bottom: 8.75rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    top: 0rem;
+    right: 0rem;
+    background-position: right top;
+    background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+  }
+  &-info {
+    > button {
+      z-index: 1;
+      background-color: transparent;
+      font-family: Karla;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 0.9375rem;
+      letter-spacing: 1.5px;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      color: #fff;
+      border: 1.5px solid #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: #2d2641;
+      }
+    }
+
+    .title {
+      > h1 {
+        color: #fff;
+        font-family: "DM Serif Display", sans-serif;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.5rem;
+        letter-spacing: -0.56px;
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+// Media queries
+
+// For width 600px and above
+@include breakpoint-up(medium) {
+  .lower-section {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+// For width 900px and above
+@include breakpoint-up(large) {
+  .lower-section {
+    max-height: 15.625rem;
+    margin-left: 5.25rem;
+    margin-right: 5.15625rem;
+    padding-top: 4.3125rem;
+    padding-bottom: 4.3125rem;
+    &::before {
+      background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+    }
+    &-info {
+      flex-direction: row;
+      justify-content: space-between;
+      .title {
+        max-width: 29.6875rem;
+        > h1 {
+          font-size: 2.5rem;
+          line-height: 3.25rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+// For width 1300px and above
+@include breakpoint-up(x-large) {
+  .lower-section {
+    margin-left: 10.5rem;
+    margin-right: 10.3125rem;
+    padding-left: 5.0625rem;
+    padding-right: 5.0625rem;
+
+    &-info {
+      .title {
+        > h1 {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+          letter-spacing: -0.78px;
+        }
+      }
+    }
+  }
+}

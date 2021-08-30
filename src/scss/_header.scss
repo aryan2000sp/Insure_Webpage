@@ -5,7 +5,7 @@
   // We want navbar above all the components in web page
   z-index: 1000;
   height: 5rem;
-  top: 0;
+  top: 0rem;
   width: 100%;
   background-color: #fff;
   &-desktop {
@@ -54,7 +54,7 @@
     position: fixed;
     width: 100vw;
     top: 5rem;
-    right: 0;
+    right: 0rem;
 
     .links {
       text-align: center;

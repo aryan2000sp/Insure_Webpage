@@ -5,6 +5,9 @@ import mobileImage from "../images/image-intro-mobile.jpg";
 import desktopImage from "../images/image-intro-desktop.jpg";
 // import { ReactComponent as DesignLeft } from "../images/bg-pattern-intro-left-mobile.svg";
 const UpperSection = () => {
+  // const clicked = () => {
+  //   console.log("Clicked");
+  // };
   return (
     <section className="upper-section">
       <div className="mobile-img">
@@ -25,7 +28,7 @@ const UpperSection = () => {
             expertise and technology to help you find the plan that’s right for
             you. Ensure you and your loved ones are protected.
           </p>
-          <button className="info-button">view plans</button>
+          <button>view plans</button>
         </div>
       </article>
     </section>
