@@ -26,6 +26,7 @@
           color: #837d88;
           &:hover {
             color: #2c2830;
+            cursor: pointer;
           }
         }
       }
@@ -45,6 +46,7 @@
       &:hover {
         color: #fff;
         background-color: #2c2830;
+        cursor: pointer;
       }
     }
   }
