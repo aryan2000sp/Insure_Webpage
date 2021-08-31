@@ -22,7 +22,10 @@ const UpperSection = () => {
             className="line"
             // style={{ width: "9.375rem", border: "0.25px solid #fff" }}
           />
-          <h1>Humanizing your insurance.</h1>
+          <h1>
+            Humanizing <br />
+            your insurance.
+          </h1>
           <p>
             Get your life insurance coverage easier and faster. We blend our
             expertise and technology to help you find the plan that’s right for
