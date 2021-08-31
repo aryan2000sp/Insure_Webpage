@@ -1,0 +1,116 @@
+.footer-section {
+  background-color: #fafafa;
+  padding: 5.5rem 1.5rem;
+  position: relative;
+  &::before {
+    content: "";
+    // display: block;
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: left top;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &-title {
+    margin-bottom: 2.5rem;
+    .social-media {
+      margin-top: 2rem;
+      .icon {
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+        > path:hover {
+          fill: #2c2830;
+        }
+      }
+    }
+  }
+
+  &-line {
+    background: #dadada;
+    height: 1px;
+    width: 100%;
+  }
+
+  &-row {
+    .col {
+      width: 15.9375rem;
+      margin-top: 2.5rem;
+      > h1 {
+        color: #837d88;
+        margin-bottom: 2.25rem;
+        font-family: Karla, sans-serif;
+        font-size: 0.8125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0.9375rem;
+        letter-spacing: 1.5px;
+        text-align: center;
+      }
+
+      > h2 {
+        color: #2d2641;
+        font-family: Karla, sans-serif;
+        font-size: 0.8125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0.9375rem;
+        letter-spacing: 1.5px;
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Media queries
+
+// For width 900px and above
+@include breakpoint-up(large) {
+  .footer-section {
+    padding-right: 5.15625rem;
+    padding-left: 5.25rem;
+    &::before {
+      width: 50%;
+      background-image: url("../images/bg-pattern-footer-desktop.svg");
+    }
+    &-title {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-row {
+      flex-direction: row;
+      justify-content: space-evenly;
+      .col {
+        > h1 {
+          text-align: left;
+        }
+        > h2 {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+// For width 1300px and above
+@include breakpoint-up(x-large) {
+  .footer-section {
+    padding-left: 10.5rem;
+    padding-right: 10.3125rem;
+
+    &-main-info {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+}

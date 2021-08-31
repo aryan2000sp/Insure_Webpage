@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import UpperSection from "./Components/UpperSection";
 import MiddleSection from "./Components/MiddleSection";
 import LowerSection from "./Components/LowerSection";
+import Footer from "./Components/Footer";
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
       <UpperSection />
       <MiddleSection />
       <LowerSection />
+      <Footer />
     </>
   );
 }
