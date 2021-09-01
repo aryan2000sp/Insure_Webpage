@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Insure_Webpage/static/css/main.71d3b45d.chunk.css",
+    "main.css": "/Insure_Webpage/static/css/main.e6495a62.chunk.css",
     "main.js": "/Insure_Webpage/static/js/main.2d5761df.chunk.js",
     "main.js.map": "/Insure_Webpage/static/js/main.2d5761df.chunk.js.map",
     "runtime-main.js": "/Insure_Webpage/static/js/runtime-main.7e2d4d35.js",
@@ -8,7 +8,7 @@
     "static/js/2.81240014.chunk.js": "/Insure_Webpage/static/js/2.81240014.chunk.js",
     "static/js/2.81240014.chunk.js.map": "/Insure_Webpage/static/js/2.81240014.chunk.js.map",
     "index.html": "/Insure_Webpage/index.html",
-    "static/css/main.71d3b45d.chunk.css.map": "/Insure_Webpage/static/css/main.71d3b45d.chunk.css.map",
+    "static/css/main.e6495a62.chunk.css.map": "/Insure_Webpage/static/css/main.e6495a62.chunk.css.map",
     "static/js/2.81240014.chunk.js.LICENSE.txt": "/Insure_Webpage/static/js/2.81240014.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/Insure_Webpage/static/media/bg-pattern-intro-right-mobile.0354e571.svg",
     "static/media/bg-pattern-mobile-nav.f667c231.svg": "/Insure_Webpage/static/media/bg-pattern-mobile-nav.f667c231.svg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.7e2d4d35.js",
     "static/js/2.81240014.chunk.js",
-    "static/css/main.71d3b45d.chunk.css",
+    "static/css/main.e6495a62.chunk.css",
     "static/js/main.2d5761df.chunk.js"
   ]
 }
